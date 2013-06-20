@@ -11,16 +11,4 @@ This software is provided under the Creative Commons License BY NC SA 3.0
 
 ##Donation
 
-If you like this tool, feel free to make donation :-)
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="FH7JFRCBWL8PA">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Yoann Gini">
-<input type="hidden" name="item_number" value="ARD-Inspector">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-</form>
+If you like this tool, feel free to <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=FH7JFRCBWL8PA&lc=US&item_name=Yoann%20Gini&item_number=ARD%2dInspector&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">make donation</a> :-)
