@@ -13,6 +13,8 @@
 @interface YGARDAppDelegate () <NSWindowDelegate, NSOutlineViewDataSource, NSOutlineViewDelegate, NSTableViewDelegate>
 {
 	BOOL _dontShowLoginWindow;
+	NSMutableDictionary *_internalComputerDatabase;
+	NSMutableDictionary *_internalListDatabase;
 }
 
 - (void)showLoginWindow;
@@ -30,11 +32,16 @@
 	self.ardPreferences = nil;
 	self.internalObjectList = nil;
 	self.bindablePreferences = nil;
+	[_internalComputerDatabase release];
+	[_internalListDatabase release];
     [super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	_internalComputerDatabase = [NSMutableDictionary new];
+	_internalListDatabase = [NSMutableDictionary new];
+	
 	self.bindablePreferences = nil;
 	[self showLoginWindow];
 }
@@ -76,8 +83,8 @@
 
 - (void)preparePreferencesForBinding
 {
-	NSMutableDictionary *internalComputerDatabase = [NSMutableDictionary new];
-	NSMutableDictionary *internalListDatabase = [NSMutableDictionary new];
+	[_internalComputerDatabase removeAllObjects];
+	[_internalListDatabase removeAllObjects];
 	
 	NSMutableArray *finalObjectList = [NSMutableArray new];
 	
@@ -127,7 +134,7 @@
 			}
 		}
 		
-		[internalComputerDatabase setObject:internalItem forKey:uuid];
+		[_internalComputerDatabase setObject:internalItem forKey:uuid];
 		[internalItem release];
 	}
 	
@@ -148,20 +155,37 @@
 		
 		internalItems = [NSMutableArray new];
 		for (uuid in [ardList objectForKey:@"items"]) {
-			[internalItems addObject:[internalComputerDatabase objectForKey:uuid]];
+			[internalItems addObject:[_internalComputerDatabase objectForKey:uuid]];
 		}
 		
 		[internalItem setObject:internalItems
 						 forKey:@"items"];
 		[internalItems release];
 		
-		[internalListDatabase setObject:internalItem forKey:[ardList objectForKey:@"uuid"]];
+		[_internalListDatabase setObject:internalItem forKey:[ardList objectForKey:@"uuid"]];
 		[internalItem release];
 	}
 	
 	
+	NSMutableDictionary *specialList = [NSMutableDictionary new];
+	
+	[specialList setObject:@"smartList"
+					forKey:@"internalType"];
+	
+	[specialList setObject:NSLocalizedString(@"All computers", @"")
+					forKey:@"name"];
+	
+	[specialList setObject:[[_internalComputerDatabase allValues] sortedArrayUsingComparator:^NSComparisonResult(NSDictionary* obj1, NSDictionary* obj2) {
+		return [[obj1 objectForKey:@"name"] compare:[obj2 objectForKey:@"name"]];
+	}]
+					forKey:@"items"];
+	
+	[finalObjectList addObject:specialList];
+	
+	[specialList release];
 	
 	
+	NSMutableDictionary *workingListDatabase = [_internalListDatabase mutableCopy];
 	for (id ardObject in [self.ardPreferences objectForKey:@"ObjectList"]) {
 		if ([ardObject isKindOfClass:[NSDictionary class]])
 		{
@@ -177,11 +201,11 @@
 			
 			internalItems = [NSMutableArray new];
 			for (uuid in [ardObject objectForKey:@"members"]) {
-				internalNeastedItem = [internalListDatabase objectForKey:uuid];
+				internalNeastedItem = [workingListDatabase objectForKey:uuid];
 				if (internalNeastedItem)
 				{
 					[internalItems addObject:internalNeastedItem];
-					[internalListDatabase removeObjectForKey:uuid];
+					[workingListDatabase removeObjectForKey:uuid];
 				}
 				else
 				{
@@ -199,15 +223,15 @@
 	}
 	
 	
-	for (internalItem in [internalListDatabase allValues]) {
+	for (internalItem in [workingListDatabase allValues]) {
 		[finalObjectList addObject:internalItem];
 	}
+	
+	[workingListDatabase release];
 	
 	self.internalObjectList = finalObjectList;
 	
 	[finalObjectList release];
-	[internalListDatabase release];
-	[internalComputerDatabase release];
 	
 	[self reloadUI];
 }
