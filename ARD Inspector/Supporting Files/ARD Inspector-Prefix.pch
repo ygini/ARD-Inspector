@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'ARD Inspector' target in the 'ARD Inspector' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#import "YGARDIConstants.h"
+#endif
