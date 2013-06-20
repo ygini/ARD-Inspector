@@ -141,7 +141,7 @@
 	
 	
 	
-	internalItems = [NSMutableArray new];
+	internalItems = nil;
 	
 	for (NSDictionary *ardList in [self.ardPreferences objectForKey:@"ListDatabase"]) {
 		internalItem = [NSMutableDictionary new];
