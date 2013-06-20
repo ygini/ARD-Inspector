@@ -5,9 +5,11 @@ This tools allow you to decrypt the Apple Remote Desktop database (with the Mast
 
 You can download a precompiled version <a href="https://github.com/ygini/ARD-Inspector/raw/master/Archives/ARD%20Inspector.dmg">here</a>.
 
-##Donation
+##Donation & Discussions
 
 If you like this tool, feel free to <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=FH7JFRCBWL8PA&lc=US&item_name=Yoann%20Gini&item_number=ARD%2dInspector&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">make donation</a> :-)
+
+All interested people can join the dedicated <a href="http://groups.google.com/group/ard-inspector?src=email&hl=en">Google Group to ARD Inspector</a> to talk about software evolutions.
 
 ## Limitations
 
