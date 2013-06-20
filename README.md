@@ -29,3 +29,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 This software is provided under the Creative Commons License BY NC SA 3.0 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/aaaa6a9657c9c7371b85986f0d3db7d0 "githalytics.com")](http://githalytics.com/ygini/ARD-Inspector)
