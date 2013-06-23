@@ -12,7 +12,7 @@
 static NSString * const YGARDInspectorErrorDomain = @"me.gini.ARDInspector";
 static NSString * const YGARDInspectorErrorFileTypeKey = @"YGARDInspectorErrorFileTypeKey";
 
-typedef NS_ENUM(NSInteger, YGARDInspectorError) {
+typedef enum {
     YGARDInspectorErrorBadFileType,
 	YGARDInspectorErrorNoMasterPassword,
 	YGARDInspectorErrorCantCreateCCCryptorRef,
@@ -20,6 +20,6 @@ typedef NS_ENUM(NSInteger, YGARDInspectorError) {
 	YGARDInspectorErrorCantFinalizeCCCryptorRef,
 	YGARDInspectorErrorUnreadableArchive,
 	YGARDInspectorErrorUnkown
-};
+} YGARDInspectorError;
 
 #endif
