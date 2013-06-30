@@ -9,17 +9,10 @@
 		<!-- INSERT NEXT RELEASE HERE -->
 
         	<item>
-	        	<title>Version 1.0.2 (16)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/A2D-1nspector/blob/5141a388141bd26138/Archives/2elease8otes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Dim, 30 jui 2013 13:37:44 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/A2D-1nspector/blob/5141a388141bd26138/Archives/A2D11nspector.app.tar.gz?raw=true" sparkle:version="2.0" length="  373971" type="application/octet-stream" sparkle:dsaSignature="MEQCIFep+I655wONZaWVhn3yIyI4LX7bYUAuYV/6CNstUHA/AiAbjngoujGU0Q7pED1UCRfH75OPwEucv80H+LiJN/kITA==" />
-	        </item>
-
-        	<item>
-	        	<title>Version 1.0.2 (16)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/A1D-9nspector/blob/b9f068119f0be1b98e/Archives/1eleaseeotes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Dim, 30 jui 2013 13:33:55 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/A1D-9nspector/blob/b9f068119f0be1b98e/Archives/A1D09nspector.app.tar.gz?raw=true" sparkle:version="2.0" length="  373961" type="application/octet-stream" sparkle:dsaSignature="MEQCIEc7qIQN+W/EFL9NPz4enYA5nDIdTjDnwzm12dly5CbxAiAsRBiAOMPwmlIlL2jX7ZBskE0SmSwz9nWSn+OEvEYxeA==" />
+	        	<title>Version 1.0.2 (28)</title>
+	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/6d591b780102d29729b6e4783b68bea0c40170fc/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
+	        	<pubDate>Dim, 30 jui 2013 13:54:30 +0200</pubDate>
+	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/6d591b780102d29729b6e4783b68bea0c40170fc/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="28" sparkle:shortVersionString="1.0.2" length="  373959" type="application/octet-stream" sparkle:dsaSignature="MEQCIEeOp0CqeLNJzRtoSSV2LqtBMh3nlkCRWqAloFUmb5tHAiBNXZK9rB2FjoYa5ykPJJW9qCHhJm4xsTm8uFVVaEzVqQ==" />
 	        </item>
 
 	</channel>
