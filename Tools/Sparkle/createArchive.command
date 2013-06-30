@@ -83,7 +83,7 @@ sed -e "s#TAG_TITLE#$updateTitle#g" -e "s#TAG_RELEASE_NOTES#$finalGITReleaseNote
 
 sed -i -e "/<!-- INSERT NEXT RELEASE HERE -->/r $intermediateAppcastSeed" "$finalAppcast"
 
-git add "$finalAppcast"
-git commit -m "Update appcast file ($updateTitle)"
+git add "$finalAppcast" "ARD Inspector/Supporting Files/ARD Inspector-Info.plist" 
+git commit -m "Update appcast file and Info.plist ($updateTitle)"
 
 rm -rf "$wrkFolder"
