@@ -14,8 +14,26 @@
 		E10E520E177257AE0025DBFD /* YGARDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E520D177257AE0025DBFD /* YGARDAppDelegate.m */; };
 		E10E5211177257AE0025DBFD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10E520F177257AE0025DBFD /* MainMenu.xib */; };
 		E10E521C177258920025DBFD /* YGARDPreferencesDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E521B177258920025DBFD /* YGARDPreferencesDecoder.m */; };
+		E1696A9A17802A4F009700E8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1696A9917802A4F009700E8 /* Sparkle.framework */; };
+		E1696A9C17802A70009700E8 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E1696A9917802A4F009700E8 /* Sparkle.framework */; };
+		E1696A9E17802B87009700E8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E1696A9D17802B87009700E8 /* dsa_pub.pem */; };
+		E1BAB96D17802938001BBA4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAB96C17802938001BBA4E /* Security.framework */; };
 		E1D5E5291772DCC30011E79A /* list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D5E5281772DCC30011E79A /* list-32.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1696A9B17802A65009700E8 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1696A9C17802A70009700E8 /* Sparkle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E10E51F7177257AE0025DBFD /* ARD Inspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARD Inspector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +51,9 @@
 		E10E5210177257AE0025DBFD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E10E521A177258920025DBFD /* YGARDPreferencesDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGARDPreferencesDecoder.h; sourceTree = "<group>"; };
 		E10E521B177258920025DBFD /* YGARDPreferencesDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGARDPreferencesDecoder.m; sourceTree = "<group>"; };
+		E1696A9917802A4F009700E8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		E1696A9D17802B87009700E8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		E1BAB96C17802938001BBA4E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E1D5E5281772DCC30011E79A /* list-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-32.png"; sourceTree = "<group>"; };
 		E1D8AD6B17725AC600A42763 /* YGARDIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGARDIConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,7 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BAB96D17802938001BBA4E /* Security.framework in Frameworks */,
 				E10E51FB177257AE0025DBFD /* Cocoa.framework in Frameworks */,
+				E1696A9A17802A4F009700E8 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +92,8 @@
 		E10E51F9177257AE0025DBFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1696A9917802A4F009700E8 /* Sparkle.framework */,
+				E1BAB96C17802938001BBA4E /* Security.framework */,
 				E10E51FA177257AE0025DBFD /* Cocoa.framework */,
 				E10E51FC177257AE0025DBFD /* Other Frameworks */,
 			);
@@ -99,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E1D5E5281772DCC30011E79A /* list-32.png */,
+				E1696A9D17802B87009700E8 /* dsa_pub.pem */,
 				E1D8AD6B17725AC600A42763 /* YGARDIConstants.h */,
 				E10E5202177257AE0025DBFD /* ARD Inspector-Info.plist */,
 				E10E5203177257AE0025DBFD /* InfoPlist.strings */,
@@ -143,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E10E5214177257AE0025DBFD /* Build configuration list for PBXNativeTarget "ARD Inspector" */;
 			buildPhases = (
+				E14CCD271774B8A2008D3255 /* GitVersion */,
 				E10E51F3177257AE0025DBFD /* Sources */,
 				E10E51F4177257AE0025DBFD /* Frameworks */,
 				E10E51F5177257AE0025DBFD /* Resources */,
+				E1696A9B17802A65009700E8 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,10 +220,28 @@
 				E10E520B177257AE0025DBFD /* Credits.rtf in Resources */,
 				E10E5211177257AE0025DBFD /* MainMenu.xib in Resources */,
 				E1D5E5291772DCC30011E79A /* list-32.png in Resources */,
+				E1696A9E17802B87009700E8 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E14CCD271774B8A2008D3255 /* GitVersion */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = GitVersion;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -o errexit\nset -o nounset\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\nVERSION=$(git rev-list master | wc -l)\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $VERSION\" \"${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E10E51F3177257AE0025DBFD /* Sources */ = {
@@ -264,7 +310,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -290,7 +336,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -299,10 +345,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARD Inspector/Supporting Files/ARD Inspector-Prefix.pch";
 				INFOPLIST_FILE = "ARD Inspector/Supporting Files/ARD Inspector-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,10 +365,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARD Inspector/Supporting Files/ARD Inspector-Prefix.pch";
 				INFOPLIST_FILE = "ARD Inspector/Supporting Files/ARD Inspector-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
