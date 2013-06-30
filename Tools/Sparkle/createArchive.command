@@ -49,6 +49,7 @@ chown :staff "$wrkFolder"
 
 xcodebuild -project "ARD Inspector.xcodeproj" -target "ARD Inspector" -configuration "Release" -sign="Yoann Gini" OBJROOT="$wrkFolder" SYMROOT="$wrkFolder"
 
+codesign -s "$codeSignIdentity" "$intermediateAppBundlePath/Contents/Frameworks/Sparkle.framework"
 codesign -s "$codeSignIdentity" "$intermediateAppBundlePath"
 
 cd "$buildFolder"
