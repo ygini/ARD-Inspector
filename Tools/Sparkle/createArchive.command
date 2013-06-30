@@ -60,14 +60,6 @@ cd -
 mv "$intermediateArchivePath" "$archiveFolder"
 mv "$intermediateSYMPath" "$archiveFolder"
 
-git add "$finalArchivePath" "$finalSYMPath" "$archiveFolder/$releaseNoteName"
-git commit -m "Automatic build system"
-
-lastCommitHash="$(git rev-parse HEAD)"
-
-finalGITArchiveURL=$(echo $baseGITArchiveURL | tr "GIT_COMMIT_VERSION" "$lastCommitHash")
-finalGITReleaseNoteURL=$(echo $baseGITReleaseNoteURL | tr "GIT_COMMIT_VERSION" "$lastCommitHash")
-
 archiveSignature=$("$signScript" "$finalArchivePath" "$dsaPrivateKeyPath" | tr -d '\n')
 
 humanVersion="$(defaults read "$intermediateAppBundlePath/Contents/Info" CFBundleShortVersionString)"
@@ -79,9 +71,19 @@ pubDate="$(date +"%a, %d %b %Y %H:%M:%S %z")"
 
 archiveSize="$(wc -c < "$finalArchivePath")"
 
+git add "$finalArchivePath" "$finalSYMPath" "$archiveFolder/$releaseNoteName"
+git commit -m "Automatic build system ($updateTitle)"
 
-sed -e "s#TAG_TITLE#$updateTitle#g" -e "s#TAG_RELEASE_NOTES#$finalGITReleaseNoteURL#g" -e "s#TAG_DATE#$pubDate#g" -e "s#TAG_ARCHIVE_URL#$finalGITArchiveURL#g" -e "s#TAG_SIZE#$archiveSize#g" -e "s#TAG_SIGNATURE#$archiveSignature#g" $originalAppcastSeed > $intermediateAppcastSeed
+lastCommitHash="$(git rev-parse HEAD)"
 
-sed -i -e "/<!-- INSERT NEXT RELEASE HERE -->/r $intermediateAppcastSeed" $finalAppcast
+finalGITArchiveURL=$(echo $baseGITArchiveURL | tr "GIT_COMMIT_VERSION" "$lastCommitHash")
+finalGITReleaseNoteURL=$(echo $baseGITReleaseNoteURL | tr "GIT_COMMIT_VERSION" "$lastCommitHash")
+
+sed -e "s#TAG_TITLE#$updateTitle#g" -e "s#TAG_RELEASE_NOTES#$finalGITReleaseNoteURL#g" -e "s#TAG_DATE#$pubDate#g" -e "s#TAG_ARCHIVE_URL#$finalGITArchiveURL#g" -e "s#TAG_SIZE#$archiveSize#g" -e "s#TAG_SIGNATURE#$archiveSignature#g" "$originalAppcastSeed" > "$intermediateAppcastSeed"
+
+sed -i -e "/<!-- INSERT NEXT RELEASE HERE -->/r $intermediateAppcastSeed" "$finalAppcast"
+
+git add "$finalAppcast"
+git commit -m "Update appcast file ($updateTitle)"
 
 rm -rf "$wrkFolder"
