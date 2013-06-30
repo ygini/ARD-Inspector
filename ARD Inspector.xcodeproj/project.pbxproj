@@ -10,13 +10,13 @@
 		E10E51FB177257AE0025DBFD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10E51FA177257AE0025DBFD /* Cocoa.framework */; };
 		E10E5205177257AE0025DBFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E10E5203177257AE0025DBFD /* InfoPlist.strings */; };
 		E10E5207177257AE0025DBFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E5206177257AE0025DBFD /* main.m */; };
-		E10E520B177257AE0025DBFD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E10E5209177257AE0025DBFD /* Credits.rtf */; };
 		E10E520E177257AE0025DBFD /* YGARDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E520D177257AE0025DBFD /* YGARDAppDelegate.m */; };
 		E10E5211177257AE0025DBFD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10E520F177257AE0025DBFD /* MainMenu.xib */; };
 		E10E521C177258920025DBFD /* YGARDPreferencesDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E10E521B177258920025DBFD /* YGARDPreferencesDecoder.m */; };
 		E1696A9A17802A4F009700E8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1696A9917802A4F009700E8 /* Sparkle.framework */; };
 		E1696A9C17802A70009700E8 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E1696A9917802A4F009700E8 /* Sparkle.framework */; };
 		E1696A9E17802B87009700E8 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E1696A9D17802B87009700E8 /* dsa_pub.pem */; };
+		E1988672178060F000A80D56 /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = E1988671178060F000A80D56 /* Credits.rtfd */; };
 		E1BAB96D17802938001BBA4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAB96C17802938001BBA4E /* Security.framework */; };
 		E1D5E5291772DCC30011E79A /* list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D5E5281772DCC30011E79A /* list-32.png */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,6 @@
 		E10E5204177257AE0025DBFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E10E5206177257AE0025DBFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E10E5208177257AE0025DBFD /* ARD Inspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARD Inspector-Prefix.pch"; sourceTree = "<group>"; };
-		E10E520A177257AE0025DBFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		E10E520C177257AE0025DBFD /* YGARDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGARDAppDelegate.h; sourceTree = "<group>"; };
 		E10E520D177257AE0025DBFD /* YGARDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YGARDAppDelegate.m; sourceTree = "<group>"; };
 		E10E5210177257AE0025DBFD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		E10E521B177258920025DBFD /* YGARDPreferencesDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YGARDPreferencesDecoder.m; sourceTree = "<group>"; };
 		E1696A9917802A4F009700E8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		E1696A9D17802B87009700E8 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		E1988671178060F000A80D56 /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
 		E1BAB96C17802938001BBA4E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E1D5E5281772DCC30011E79A /* list-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-32.png"; sourceTree = "<group>"; };
 		E1D8AD6B17725AC600A42763 /* YGARDIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGARDIConstants.h; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				E10E5203177257AE0025DBFD /* InfoPlist.strings */,
 				E10E5206177257AE0025DBFD /* main.m */,
 				E10E5208177257AE0025DBFD /* ARD Inspector-Prefix.pch */,
-				E10E5209177257AE0025DBFD /* Credits.rtf */,
+				E1988671178060F000A80D56 /* Credits.rtfd */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -217,10 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10E5205177257AE0025DBFD /* InfoPlist.strings in Resources */,
-				E10E520B177257AE0025DBFD /* Credits.rtf in Resources */,
 				E10E5211177257AE0025DBFD /* MainMenu.xib in Resources */,
 				E1D5E5291772DCC30011E79A /* list-32.png in Resources */,
 				E1696A9E17802B87009700E8 /* dsa_pub.pem in Resources */,
+				E1988672178060F000A80D56 /* Credits.rtfd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,14 +263,6 @@
 				E10E5204177257AE0025DBFD /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E10E5209177257AE0025DBFD /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E10E520A177257AE0025DBFD /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		E10E520F177257AE0025DBFD /* MainMenu.xib */ = {
