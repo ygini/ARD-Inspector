@@ -9,17 +9,10 @@
 		<!-- INSERT NEXT RELEASE HERE -->
 
         	<item>
-	        	<title>Version 1.0.2 (59)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/2e444fa015cd63b72ab8f4c257301fc2ab9ce27b/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Dim, 30 jui 2013 14:40:56 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/2e444fa015cd63b72ab8f4c257301fc2ab9ce27b/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="59" sparkle:shortVersionString="1.0.2" length="  392776" type="application/octet-stream" sparkle:dsaSignature="MCwCFBjEqiLtyQgBswgHdv7aUhC0iKbyAhRRteuhvT7U8PvpRgJIRHJLfHHIqg==" />
-	        </item>
-
-        	<item>
-	        	<title>Version 1.0.2 (55)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/cfd63512a5e846f66052e9353fb8d373f1f731ff/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Dim, 30 jui 2013 14:19:01 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/cfd63512a5e846f66052e9353fb8d373f1f731ff/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="55" sparkle:shortVersionString="1.0.2" length="  393168" type="application/octet-stream" sparkle:dsaSignature="MEQCIESk8MDVH7Wk4hvkbFA/YTOAJ5esdSONWO75fYnm/licAiBvMjzF22XYH2KD+nP4RTul/uRF/iy3fN2zV0AxNMLTAA==" />
+	        	<title>Version 1.0.2 (63)</title>
+	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/74227d81e8ae389fe4a95d7a9455013299c5e7bb/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
+	        	<pubDate>Dim, 30 jui 2013 14:53:34 +0200</pubDate>
+	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/74227d81e8ae389fe4a95d7a9455013299c5e7bb/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="63" sparkle:shortVersionString="1.0.2" length="  400624" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCFBvyXKiC9JCuP7en5i/+ShuEqxgIUaBobwZqsyrQC11BpAAIshsQV6h0=" />
 	        </item>
 
 	</channel>
