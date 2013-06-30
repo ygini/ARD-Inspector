@@ -10,9 +10,9 @@
 
         	<item>
 	        	<title>Version 1.0.2 (28)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/A2D-5nspector/blob/95113f00511ad245f6/Archives/2elease6otes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Dim, 30 jui 2013 13:51:20 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/A2D-5nspector/blob/95113f00511ad245f6/Archives/A2D15nspector.app.tar.gz?raw=true" sparkle:version="28" sparkle:shortVersionString="1.0.2" length="  373981" type="application/octet-stream" sparkle:dsaSignature="MEQCIC7fZZQIYnsT+T4+mBJYjDjeUz+uVG4YX3G2v2oli+DxAiBiyNr7S05LL6keOBibKDS+MIDWoFDSIe1P5UjlQhB4cw==" />
+	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/6d591b780102d29729b6e4783b68bea0c40170fc/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
+	        	<pubDate>Dim, 30 jui 2013 13:54:30 +0200</pubDate>
+	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/6d591b780102d29729b6e4783b68bea0c40170fc/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="28" sparkle:shortVersionString="1.0.2" length="  373959" type="application/octet-stream" sparkle:dsaSignature="MEQCIEeOp0CqeLNJzRtoSSV2LqtBMh3nlkCRWqAloFUmb5tHAiBNXZK9rB2FjoYa5ykPJJW9qCHhJm4xsTm8uFVVaEzVqQ==" />
 	        </item>
 
 	</channel>
