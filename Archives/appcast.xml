@@ -9,10 +9,10 @@
 		<!-- INSERT NEXT RELEASE HERE -->
 
         	<item>
-	        	<title>Version 1.0.2 (16)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/AbD-1nspector/blob/71c3dcaa1c3f2be1cf/Archives/beleasefotes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Dim, 30 jui 2013 13:48:22 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/AbD-1nspector/blob/71c3dcaa1c3f2be1cf/Archives/AbD31nspector.app.tar.gz?raw=true" sparkle:version="16" sparkle:shortVersionString="1.0.2" length="  373965" type="application/octet-stream" sparkle:dsaSignature="MEQCIHyZ7CWEUpX2USrk2T8oxeXhcNaUuOhEie4cC+IE/tfuAiBroFUgnghXPu6suJZz5o3jhX0zidFEdqD2l+Ps1rk7iQ==" />
+	        	<title>Version 1.0.2 (28)</title>
+	        	<sparkle:releaseNotesLink>https://github.com/ygini/A2D-5nspector/blob/95113f00511ad245f6/Archives/2elease6otes.html?raw=true</sparkle:releaseNotesLink>
+	        	<pubDate>Dim, 30 jui 2013 13:51:20 +0200</pubDate>
+	        	<enclosure url="https://github.com/ygini/A2D-5nspector/blob/95113f00511ad245f6/Archives/A2D15nspector.app.tar.gz?raw=true" sparkle:version="28" sparkle:shortVersionString="1.0.2" length="  373981" type="application/octet-stream" sparkle:dsaSignature="MEQCIC7fZZQIYnsT+T4+mBJYjDjeUz+uVG4YX3G2v2oli+DxAiBiyNr7S05LL6keOBibKDS+MIDWoFDSIe1P5UjlQhB4cw==" />
 	        </item>
 
 	</channel>
