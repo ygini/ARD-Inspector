@@ -76,8 +76,8 @@ git commit -m "Automatic build system ($updateTitle)"
 
 lastCommitHash="$(git rev-parse HEAD)"
 
-finalGITArchiveURL=$(echo $baseGITArchiveURL | tr "GIT_COMMIT_VERSION" "$lastCommitHash")
-finalGITReleaseNoteURL=$(echo $baseGITReleaseNoteURL | tr "GIT_COMMIT_VERSION" "$lastCommitHash")
+finalGITArchiveURL=$(echo $baseGITArchiveURL | sed -e "s/GIT_COMMIT_VERSION/$lastCommitHash/")
+finalGITReleaseNoteURL=$(echo $baseGITReleaseNoteURL | sed -e"s/GIT_COMMIT_VERSION/$lastCommitHash/")
 
 sed -e "s#TAG_TITLE#$updateTitle#g" -e "s#TAG_RELEASE_NOTES#$finalGITReleaseNoteURL#g" -e "s#TAG_DATE#$pubDate#g" -e "s#TAG_ARCHIVE_URL#$finalGITArchiveURL#g" -e "s#TAG_SIZE#$archiveSize#g" -e "s#TAG_SIGNATURE#$archiveSignature#g" -e "s#TAG_HUMAN_VERSION#$humanVersion#g" -e "s#TAG_BUILD_VERSION#$buildVersion#g" "$originalAppcastSeed" > "$intermediateAppcastSeed"
 
