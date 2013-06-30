@@ -3,5 +3,5 @@
 	        	<title>TAG_TITLE</title>
 	        	<sparkle:releaseNotesLink>TAG_RELEASE_NOTES</sparkle:releaseNotesLink>
 	        	<pubDate>TAG_DATE</pubDate>
-	        	<enclosure url="TAG_ARCHIVE_URL" sparkle:version="2.0" length="TAG_SIZE" type="application/octet-stream" sparkle:dsaSignature="TAG_SIGNATURE" />
+	        	<enclosure url="TAG_ARCHIVE_URL" sparkle:version="TAG_BUILD_VERSION" sparkle:shortVersionString="TAG_HUMAN_VERSION" length="TAG_SIZE" type="application/octet-stream" sparkle:dsaSignature="TAG_SIGNATURE" />
 	        </item>
