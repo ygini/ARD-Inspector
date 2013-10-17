@@ -285,6 +285,14 @@
 	[NSApp endSheet:self.loginWindow returnCode:NSOKButton];
 }
 
+- (IBAction)openiNigWebSite:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.inig-services.com/"]];
+}
+
+- (IBAction)openDonationWebPage:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9ZFVM5Q89UNNS"]];
+}
+
 #pragma mark - NSOutlineView
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item

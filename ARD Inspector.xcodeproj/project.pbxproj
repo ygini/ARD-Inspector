@@ -19,6 +19,8 @@
 		E1988672178060F000A80D56 /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = E1988671178060F000A80D56 /* Credits.rtfd */; };
 		E1BAB96D17802938001BBA4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAB96C17802938001BBA4E /* Security.framework */; };
 		E1D5E5291772DCC30011E79A /* list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D5E5281772DCC30011E79A /* list-32.png */; };
+		E1F0753E181050F3008C9F28 /* YG-Label-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F0753D181050F3008C9F28 /* YG-Label-Logo.png */; };
+		E1F0754018105350008C9F28 /* btn_donate.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F0753F18105350008C9F28 /* btn_donate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +58,8 @@
 		E1BAB96C17802938001BBA4E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E1D5E5281772DCC30011E79A /* list-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-32.png"; sourceTree = "<group>"; };
 		E1D8AD6B17725AC600A42763 /* YGARDIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGARDIConstants.h; sourceTree = "<group>"; };
+		E1F0753D181050F3008C9F28 /* YG-Label-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YG-Label-Logo.png"; sourceTree = "<group>"; };
+		E1F0753F18105350008C9F28 /* btn_donate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_donate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +127,9 @@
 		E10E5201177257AE0025DBFD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E1F0753D181050F3008C9F28 /* YG-Label-Logo.png */,
 				E1D5E5281772DCC30011E79A /* list-32.png */,
+				E1F0753F18105350008C9F28 /* btn_donate.png */,
 				E1696A9D17802B87009700E8 /* dsa_pub.pem */,
 				E1D8AD6B17725AC600A42763 /* YGARDIConstants.h */,
 				E10E5202177257AE0025DBFD /* ARD Inspector-Info.plist */,
@@ -218,7 +224,9 @@
 			files = (
 				E10E5205177257AE0025DBFD /* InfoPlist.strings in Resources */,
 				E10E5211177257AE0025DBFD /* MainMenu.xib in Resources */,
+				E1F0754018105350008C9F28 /* btn_donate.png in Resources */,
 				E1D5E5291772DCC30011E79A /* list-32.png in Resources */,
+				E1F0753E181050F3008C9F28 /* YG-Label-Logo.png in Resources */,
 				E1696A9E17802B87009700E8 /* dsa_pub.pem in Resources */,
 				E1988672178060F000A80D56 /* Credits.rtfd in Resources */,
 			);
@@ -348,6 +356,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -368,6 +377,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
