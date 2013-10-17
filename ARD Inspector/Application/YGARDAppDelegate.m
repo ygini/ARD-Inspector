@@ -255,7 +255,13 @@
 	[sheet orderOut:self];
 	
 	if (NSOKButton == returnCode) {
-		[self loadARDPreferencesFromFile:[@"~/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
+
+		if ([[NSFileManager defaultManager] fileExistsAtPath:@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" isDirectory:NULL]) {
+			[self loadARDPreferencesFromFile:[@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
+		}
+		else {
+			[self loadARDPreferencesFromFile:[@"~/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
+		}
 	}
 	else
 	{
