@@ -16,13 +16,6 @@
 	        </item>
 
         	<item>
-	        	<title>Version 1.1 (74)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/13d606198097885a7c4d2bacbcd077932ba7f64c/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Jeu, 17 oct 2013 21:08:08 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/13d606198097885a7c4d2bacbcd077932ba7f64c/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="74" sparkle:shortVersionString="1.1" length="  415662" type="application/octet-stream" sparkle:dsaSignature="MC0CFAxYe7Oz3t6hVyDBf+r6YLaw2rRXAhUAmvMr9Ly3FJ7TVtPmP8NcQGOsacM=" />
-	        </item>
-
-        	<item>
 	        	<title>Version 1.0.2 (63)</title>
 	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/74227d81e8ae389fe4a95d7a9455013299c5e7bb/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
 	        	<pubDate>Dim, 30 jui 2013 14:53:34 +0200</pubDate>
