@@ -1,0 +1,3 @@
+[submodule "Vendors/google-analytics-sdk-for-osx"]
+	path = Vendors/google-analytics-sdk-for-osx
+	url = https://github.com/noahsw/google-analytics-sdk-for-osx.git

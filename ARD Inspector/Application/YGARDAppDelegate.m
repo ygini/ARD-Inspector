@@ -9,6 +9,16 @@
 #import "YGARDAppDelegate.h"
 
 #import "YGARDPreferencesDecoder.h"
+#import <Google Analytics SDK for OSX/AnalyticsHelper.h>
+
+NSString *osver()
+{
+    SInt32 versionMajor=0, versionMinor=0, versionBugFix=0;
+    Gestalt(gestaltSystemVersionMajor, &versionMajor);
+    Gestalt(gestaltSystemVersionMinor, &versionMinor);
+    Gestalt(gestaltSystemVersionBugFix, &versionBugFix);
+    return [NSString stringWithFormat:@"%d.%d.%d", versionMajor, versionMinor, versionBugFix];
+}
 
 @interface YGARDAppDelegate () <NSWindowDelegate, NSOutlineViewDataSource, NSOutlineViewDelegate, NSTableViewDelegate>
 {
@@ -39,6 +49,24 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	[[NSUserDefaults standardUserDefaults] registerDefaults:@{
+															  @"YGARDSendAnalytics": @YES,
+															  @"SUAutomaticallyUpdate": @YES,
+															  @"YGARDShowPaypalButton": @YES
+															  }];
+	
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"YGARDSendAnalytics"]) {
+		AnalyticsHelper* analyticsHelper = [AnalyticsHelper new];
+		
+		[analyticsHelper setDomainName:@"ard-inspector.app.inig-services.com"];
+		[analyticsHelper setAnalyticsAccountCode:@"UA-38764414-2"];
+		
+		[analyticsHelper fireEvent:osver() eventValue:@1];
+		
+		[analyticsHelper release];
+	}
+
+	
 	_internalComputerDatabase = [NSMutableDictionary new];
 	_internalListDatabase = [NSMutableDictionary new];
 	
@@ -48,7 +76,7 @@
 
 -(void)windowWillClose:(NSNotification *)notification
 {
-	_dontShowLoginWindow = YES;
+	self.ardPreferences = nil;
 	
 }
 
@@ -70,6 +98,8 @@
 	self.ardPreferences = [YGARDPreferencesDecoder decodePreferences:dict
 												  withMasterPassword:self.masterPassword.stringValue
 															   error:NULL];
+	
+	self.masterPassword.stringValue = @"";
 	
 	if (self.ardPreferences)
 	{
