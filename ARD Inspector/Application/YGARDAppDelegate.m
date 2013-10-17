@@ -9,7 +9,6 @@
 #import "YGARDAppDelegate.h"
 
 #import "YGARDPreferencesDecoder.h"
-#import <Google Analytics SDK for OSX/AnalyticsHelper.h>
 
 NSString *osver()
 {
@@ -50,21 +49,9 @@ NSString *osver()
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	[[NSUserDefaults standardUserDefaults] registerDefaults:@{
-															  @"YGARDSendAnalytics": @YES,
 															  @"SUAutomaticallyUpdate": @YES,
 															  @"YGARDShowPaypalButton": @YES
 															  }];
-	
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"YGARDSendAnalytics"]) {
-		AnalyticsHelper* analyticsHelper = [AnalyticsHelper new];
-		
-		[analyticsHelper setDomainName:@"ard-inspector.app.inig-services.com"];
-		[analyticsHelper setAnalyticsAccountCode:@"UA-38764414-2"];
-		
-		[analyticsHelper fireEvent:osver() eventValue:@1];
-		
-		[analyticsHelper release];
-	}
 
 	
 	_internalComputerDatabase = [NSMutableDictionary new];
