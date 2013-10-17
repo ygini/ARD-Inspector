@@ -10,6 +10,15 @@
 
 #import "YGARDPreferencesDecoder.h"
 
+NSString *osver()
+{
+    SInt32 versionMajor=0, versionMinor=0, versionBugFix=0;
+    Gestalt(gestaltSystemVersionMajor, &versionMajor);
+    Gestalt(gestaltSystemVersionMinor, &versionMinor);
+    Gestalt(gestaltSystemVersionBugFix, &versionBugFix);
+    return [NSString stringWithFormat:@"%d.%d.%d", versionMajor, versionMinor, versionBugFix];
+}
+
 @interface YGARDAppDelegate () <NSWindowDelegate, NSOutlineViewDataSource, NSOutlineViewDelegate, NSTableViewDelegate>
 {
 	BOOL _dontShowLoginWindow;
@@ -39,6 +48,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+	[[NSUserDefaults standardUserDefaults] registerDefaults:@{
+															  @"SUAutomaticallyUpdate": @YES,
+															  @"YGARDShowPaypalButton": @YES
+															  }];
+
+	
 	_internalComputerDatabase = [NSMutableDictionary new];
 	_internalListDatabase = [NSMutableDictionary new];
 	
@@ -48,7 +63,7 @@
 
 -(void)windowWillClose:(NSNotification *)notification
 {
-	_dontShowLoginWindow = YES;
+	self.ardPreferences = nil;
 	
 }
 
@@ -70,6 +85,8 @@
 	self.ardPreferences = [YGARDPreferencesDecoder decodePreferences:dict
 												  withMasterPassword:self.masterPassword.stringValue
 															   error:NULL];
+	
+	self.masterPassword.stringValue = @"";
 	
 	if (self.ardPreferences)
 	{
@@ -255,7 +272,13 @@
 	[sheet orderOut:self];
 	
 	if (NSOKButton == returnCode) {
-		[self loadARDPreferencesFromFile:[@"~/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
+
+		if ([[NSFileManager defaultManager] fileExistsAtPath:@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" isDirectory:NULL]) {
+			[self loadARDPreferencesFromFile:[@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
+		}
+		else {
+			[self loadARDPreferencesFromFile:[@"~/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
+		}
 	}
 	else
 	{
@@ -277,6 +300,14 @@
 
 - (IBAction)loginWindowOK:(id)sender {
 	[NSApp endSheet:self.loginWindow returnCode:NSOKButton];
+}
+
+- (IBAction)openiNigWebSite:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.inig-services.com/"]];
+}
+
+- (IBAction)openDonationWebPage:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9ZFVM5Q89UNNS"]];
 }
 
 #pragma mark - NSOutlineView
