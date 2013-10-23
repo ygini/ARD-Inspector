@@ -273,7 +273,7 @@ NSString *osver()
 	
 	if (NSOKButton == returnCode) {
 
-		if ([[NSFileManager defaultManager] fileExistsAtPath:@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" isDirectory:NULL]) {
+		if ([[NSFileManager defaultManager] fileExistsAtPath:[@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath] isDirectory:NULL]) {
 			[self loadARDPreferencesFromFile:[@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
 		}
 		else {
