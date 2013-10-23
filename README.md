@@ -3,7 +3,7 @@ ARD Inspector
 
 This tools allow you to decrypt the Apple Remote Desktop database (with the Master Password) and access to the registered password.
 
-You can download a precompiled version <a href="https://github.com/ygini/ARD-Inspector/raw/master/Archives/ARD_Inspector.app.tar.gz">here</a>.
+You can download a precompiled version <a href="https://github.com/ygini/ARD-Inspector/raw/master/Archives/ARD_Inspector.app.tar.gz">here</a> (md5 3c0bd1728696f8d98548350fe62fcd55).
 
 ##Donation & Discussions
 
