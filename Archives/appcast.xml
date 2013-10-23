@@ -7,10 +7,10 @@
 		<language>en</language>
 
         	<item>
-	        	<title>Version 1.1 (86)</title>
-	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/054fc18b0512cf9451fc5205fce854e8d86c9b8f/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
-	        	<pubDate>Mer, 23 oct 2013 14:12:27 +0200</pubDate>
-	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/054fc18b0512cf9451fc5205fce854e8d86c9b8f/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="86" sparkle:shortVersionString="1.1" length="  417166" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCKNUCg3D1b2olOqVegMvKDUXXUPgIUJr0Q5VizCRAtPTt9N+gS5Ku5XNg=" />
+	        	<title>Version 1.1.1 (87)</title>
+	        	<sparkle:releaseNotesLink>https://github.com/ygini/ARD-Inspector/blob/f4425143d19f56f90be3227efd580f1e1090e21e/Archives/ReleaseNotes.html?raw=true</sparkle:releaseNotesLink>
+	        	<pubDate>Mer, 23 oct 2013 14:14:02 +0200</pubDate>
+	        	<enclosure url="https://github.com/ygini/ARD-Inspector/blob/f4425143d19f56f90be3227efd580f1e1090e21e/Archives/ARD_Inspector.app.tar.gz?raw=true" sparkle:version="87" sparkle:shortVersionString="1.1.1" length="  417171" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCBPvFnR61878cMDmDD9N1nmcCehgIUFW/OWwcb2T9NbuzpxsxPFcicM98=" />
 	        </item>
 
 	</channel>
