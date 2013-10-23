@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>ARD Inspector Changelog</title>
+		<link>https://raw.github.com/ygini/ARD-Inspector/master/Archives/appcast.xml</link>
+		<description>Most recent changes with links to updates.</description>
+		<language>en</language>
 
         	<item>
 	        	<title>TAG_TITLE</title>
@@ -5,3 +12,6 @@
 	        	<pubDate>TAG_DATE</pubDate>
 	        	<enclosure url="TAG_ARCHIVE_URL" sparkle:version="TAG_BUILD_VERSION" sparkle:shortVersionString="TAG_HUMAN_VERSION" length="TAG_SIZE" type="application/octet-stream" sparkle:dsaSignature="TAG_SIGNATURE" />
 	        </item>
+
+	</channel>
+</rss>

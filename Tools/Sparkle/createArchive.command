@@ -36,8 +36,6 @@ pubDate=""
 archiveSize=""
 
 originalAppcastSeed="./Tools/Sparkle/appcast_seed.xml"
-intermediateAppcastSeed="$wrkFolder/seed.xml"
-intermediateAppcast="$wrkFolder/appcast.xml"
 finalAppcast="$archiveFolder/appcast.xml"
 
 cd "$( dirname "${BASH_SOURCE[0]}" )"
@@ -80,9 +78,7 @@ lastCommitHash="$(git rev-parse HEAD)"
 finalGITArchiveURL=$(echo $baseGITArchiveURL | sed -e "s/GIT_COMMIT_VERSION/$lastCommitHash/")
 finalGITReleaseNoteURL=$(echo $baseGITReleaseNoteURL | sed -e"s/GIT_COMMIT_VERSION/$lastCommitHash/")
 
-sed -e "s#TAG_TITLE#$updateTitle#g" -e "s#TAG_RELEASE_NOTES#$finalGITReleaseNoteURL#g" -e "s#TAG_DATE#$pubDate#g" -e "s#TAG_ARCHIVE_URL#$finalGITArchiveURL#g" -e "s#TAG_SIZE#$archiveSize#g" -e "s#TAG_SIGNATURE#$archiveSignature#g" -e "s#TAG_HUMAN_VERSION#$humanVersion#g" -e "s#TAG_BUILD_VERSION#$buildVersion#g" "$originalAppcastSeed" > "$intermediateAppcastSeed"
-
-sed -i -e "/<!-- INSERT NEXT RELEASE HERE -->/r $intermediateAppcastSeed" "$finalAppcast"
+sed -e "s#TAG_TITLE#$updateTitle#g" -e "s#TAG_RELEASE_NOTES#$finalGITReleaseNoteURL#g" -e "s#TAG_DATE#$pubDate#g" -e "s#TAG_ARCHIVE_URL#$finalGITArchiveURL#g" -e "s#TAG_SIZE#$archiveSize#g" -e "s#TAG_SIGNATURE#$archiveSignature#g" -e "s#TAG_HUMAN_VERSION#$humanVersion#g" -e "s#TAG_BUILD_VERSION#$buildVersion#g" "$originalAppcastSeed" > "$finalAppcast"
 
 git add "$finalAppcast" "ARD Inspector/Supporting Files/ARD Inspector-Info.plist" 
 git commit -m "Update appcast file and Info.plist ($updateTitle)"
