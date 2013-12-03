@@ -7,7 +7,7 @@ You can download a precompiled version <a href="https://github.com/ygini/ARD-Ins
 
 ##Donation & Discussions
 
-If you like this tool, feel free to <a href="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif">make donation</a> :-)
+If you like this tool, feel free to <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9ZFVM5Q89UNNS">make donation</a> :-)
 
 All interested people can join the dedicated <a href="http://groups.google.com/group/ard-inspector?src=email&hl=en">Google Group to ARD Inspector</a> to talk about software evolutions.
 
