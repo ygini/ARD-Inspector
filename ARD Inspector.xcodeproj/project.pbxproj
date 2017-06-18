@@ -21,6 +21,7 @@
 		E1D5E5291772DCC30011E79A /* list-32.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D5E5281772DCC30011E79A /* list-32.png */; };
 		E1F0753E181050F3008C9F28 /* YG-Label-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F0753D181050F3008C9F28 /* YG-Label-Logo.png */; };
 		E1F0754018105350008C9F28 /* btn_donate.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F0753F18105350008C9F28 /* btn_donate.png */; };
+		F8F208911EF6466D001E1103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F208901EF6466D001E1103 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,7 @@
 		E1D8AD6B17725AC600A42763 /* YGARDIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YGARDIConstants.h; sourceTree = "<group>"; };
 		E1F0753D181050F3008C9F28 /* YG-Label-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YG-Label-Logo.png"; sourceTree = "<group>"; };
 		E1F0753F18105350008C9F28 /* btn_donate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_donate.png; sourceTree = "<group>"; };
+		F8F208901EF6466D001E1103 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		E10E5201177257AE0025DBFD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F8F208901EF6466D001E1103 /* Images.xcassets */,
 				E1F0753D181050F3008C9F28 /* YG-Label-Logo.png */,
 				E1D5E5281772DCC30011E79A /* list-32.png */,
 				E1F0753F18105350008C9F28 /* btn_donate.png */,
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10E5205177257AE0025DBFD /* InfoPlist.strings in Resources */,
+				F8F208911EF6466D001E1103 /* Images.xcassets in Resources */,
 				E10E5211177257AE0025DBFD /* MainMenu.xib in Resources */,
 				E1F0754018105350008C9F28 /* btn_donate.png in Resources */,
 				E1D5E5291772DCC30011E79A /* list-32.png in Resources */,
@@ -345,6 +349,7 @@
 		E10E5215177257AE0025DBFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -366,6 +371,7 @@
 		E10E5216177257AE0025DBFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
