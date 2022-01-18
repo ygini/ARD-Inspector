@@ -10,14 +10,6 @@
 
 #import "YGARDPreferencesDecoder.h"
 
-NSString *osver()
-{
-    SInt32 versionMajor=0, versionMinor=0, versionBugFix=0;
-    Gestalt(gestaltSystemVersionMajor, &versionMajor);
-    Gestalt(gestaltSystemVersionMinor, &versionMinor);
-    Gestalt(gestaltSystemVersionBugFix, &versionBugFix);
-    return [NSString stringWithFormat:@"%d.%d.%d", versionMajor, versionMinor, versionBugFix];
-}
 
 @interface YGARDAppDelegate () <NSWindowDelegate, NSOutlineViewDataSource, NSOutlineViewDelegate, NSTableViewDelegate>
 {
@@ -43,16 +35,15 @@ NSString *osver()
 	self.bindablePreferences = nil;
 	[_internalComputerDatabase release];
 	[_internalListDatabase release];
-    [super dealloc];
+	[super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	[[NSUserDefaults standardUserDefaults] registerDefaults:@{
-															  @"SUAutomaticallyUpdate": @YES,
-															  @"YGARDShowPaypalButton": @YES
-															  }];
-
+								  @"SUAutomaticallyUpdate": @YES,
+								  }];
+	
 	
 	_internalComputerDatabase = [NSMutableDictionary new];
 	_internalListDatabase = [NSMutableDictionary new];
@@ -69,11 +60,11 @@ NSString *osver()
 
 - (BOOL) applicationShouldOpenUntitledFile:(NSApplication *)sender
 {
-    [self.window makeKeyAndOrderFront:self];
+	[self.window makeKeyAndOrderFront:self];
 	if (!_dontShowLoginWindow) {
 		[self showLoginWindow];
 	}
-    return NO;
+	return NO;
 }
 
 #pragma mark - ARD Hack
@@ -83,8 +74,8 @@ NSString *osver()
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
 	
 	self.ardPreferences = [YGARDPreferencesDecoder decodePreferences:dict
-												  withMasterPassword:self.masterPassword.stringValue
-															   error:NULL];
+						      withMasterPassword:self.masterPassword.stringValue
+								   error:NULL];
 	
 	self.masterPassword.stringValue = @"";
 	
@@ -116,18 +107,18 @@ NSString *osver()
 	
 	
 	NSArray *computerProperties = @[
-								 @"OSVersion",
-		 @"hardwareAddress",
-		 @"machineSerialNumber",
-		 @"networkAddress",
-		 @"name",
-		 @"hostname"];
+					@"OSVersion",
+					@"hardwareAddress",
+					@"machineSerialNumber",
+					@"networkAddress",
+					@"name",
+					@"hostname"];
 	
 	
 	
 	NSArray *secretProperties = @[
 							   @"login",
-		  @"password"];
+							   @"password"];
 	
 	for (NSDictionary *ardComputer in [self.ardPreferences objectForKey:@"ComputerDatabase"]) {
 		internalItem = [NSMutableDictionary new];
@@ -165,10 +156,10 @@ NSString *osver()
 		[internalItem setObject:@"list" forKey:@"internalType"];
 		
 		[internalItem setObject:[ardList objectForKey:@"listName"]
-						 forKey:@"name"];
+				 forKey:@"name"];
 		
 		[internalItem setObject:[ardList objectForKey:@"uuid"]
-						 forKey:@"uuid"];
+				 forKey:@"uuid"];
 		
 		internalItems = [NSMutableArray new];
 		for (uuid in [ardList objectForKey:@"items"]) {
@@ -176,7 +167,7 @@ NSString *osver()
 		}
 		
 		[internalItem setObject:internalItems
-						 forKey:@"items"];
+				 forKey:@"items"];
 		[internalItems release];
 		
 		[_internalListDatabase setObject:internalItem forKey:[ardList objectForKey:@"uuid"]];
@@ -187,15 +178,15 @@ NSString *osver()
 	NSMutableDictionary *specialList = [NSMutableDictionary new];
 	
 	[specialList setObject:@"smartList"
-					forKey:@"internalType"];
+			forKey:@"internalType"];
 	
 	[specialList setObject:NSLocalizedString(@"All computers", @"")
-					forKey:@"name"];
+			forKey:@"name"];
 	
 	[specialList setObject:[[_internalComputerDatabase allValues] sortedArrayUsingComparator:^NSComparisonResult(NSDictionary* obj1, NSDictionary* obj2) {
 		return [[obj1 objectForKey:@"name"] compare:[obj2 objectForKey:@"name"]];
 	}]
-					forKey:@"items"];
+			forKey:@"items"];
 	
 	[finalObjectList addObject:specialList];
 	
@@ -211,10 +202,10 @@ NSString *osver()
 			[internalItem setObject:@"folder" forKey:@"internalType"];
 			
 			[internalItem setObject:[ardObject objectForKey:@"name"]
-							 forKey:@"name"];
+					 forKey:@"name"];
 			
 			[internalItem setObject:[ardObject objectForKey:@"state"]
-							 forKey:@"state"];
+					 forKey:@"state"];
 			
 			internalItems = [NSMutableArray new];
 			for (uuid in [ardObject objectForKey:@"members"]) {
@@ -260,9 +251,9 @@ NSString *osver()
 	if (!self.loginWindow.isVisible) {
 		[NSApp beginSheet:self.loginWindow
 		   modalForWindow:self.window
-			modalDelegate:self
+		    modalDelegate:self
 		   didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:)
-			  contextInfo:NULL];
+		      contextInfo:NULL];
 	}
 	
 }
@@ -272,7 +263,7 @@ NSString *osver()
 	[sheet orderOut:self];
 	
 	if (NSOKButton == returnCode) {
-
+		
 		if ([[NSFileManager defaultManager] fileExistsAtPath:[@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath] isDirectory:NULL]) {
 			[self loadARDPreferencesFromFile:[@"~/Library/Containers/com.apple.RemoteDesktop/Data/Library/Preferences/com.apple.RemoteDesktop.plist" stringByExpandingTildeInPath]];
 		}
@@ -338,25 +329,23 @@ NSString *osver()
 
 - (NSView*)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item
 {
-	if ([[item objectForKey:@"internalType"] isEqualToString:@"folder"])
-	{
+	if ([[item objectForKey:@"internalType"] isEqualToString:@"folder"]) {
 		NSTableCellView *cell = [outlineView makeViewWithIdentifier:@"HeaderCell" owner:self];
-        [cell.textField setStringValue:[item objectForKey:@"name"]];
-        return cell;
+		[cell.textField setStringValue:[item objectForKey:@"name"]];
+		return cell;
 	}
-	else
-	{
+	else {
 		NSTableCellView *cell = [outlineView makeViewWithIdentifier:@"DataCell" owner:self];
-        [cell.textField setStringValue:[item objectForKey:@"name"]];
+		[cell.textField setStringValue:[item objectForKey:@"name"]];
 		cell.imageView.image = [NSImage imageNamed:@"list-32.png"];
-        return cell;
+		return cell;
 	}
 }
 
 -(void)outlineViewSelectionDidChange:(NSNotification *)notification
 {
 	NSIndexSet *indexSet = [self.outlineView selectedRowIndexes];
-		
+	
 	[indexSet enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
 		NSDictionary *item = [self.outlineView itemAtRow:idx];
 		NSMutableArray *items = [NSMutableArray new];

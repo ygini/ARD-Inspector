@@ -11,8 +11,7 @@ symName="ARD Inspector.app.dSYM"
 releaseNoteName="ReleaseNotes.html"
 
 codeSignIdentity="Developer ID Application: Yoann GINI"
-signScript="./Tools/Sparkle/sign_update.rb"
-dsaPrivateKeyPath="./Tools/Sparkle/dsa_priv.pem"
+signScript="./Tools/Sparkle/bin/sign_update"
 
 archiveSignature=""
 lastCommitHash=""
@@ -47,7 +46,7 @@ chown :staff "$wrkFolder"
 
 xcodebuild -project "ARD Inspector.xcodeproj" -target "ARD Inspector" -configuration "Release" -sign="Yoann Gini" OBJROOT="$wrkFolder" SYMROOT="$wrkFolder"
 
-codesign -s "$codeSignIdentity" "$intermediateAppBundlePath/Contents/Frameworks/Sparkle.framework/Versions/A"
+codesign -s "$codeSignIdentity" "$intermediateAppBundlePath/Contents/Frameworks/Sparkle.framework/Versions/B"
 codesign -s "$codeSignIdentity" "$intermediateAppBundlePath"
 
 cd "$buildFolder"
@@ -59,7 +58,7 @@ cd -
 mv "$intermediateArchivePath" "$archiveFolder"
 mv "$intermediateSYMPath" "$archiveFolder"
 
-archiveSignature=$("$signScript" "$finalArchivePath" "$dsaPrivateKeyPath" | tr -d '\n')
+archiveSignature=$("$signScript" "$finalArchivePath" | tr -d '\n')
 
 humanVersion="$(defaults read "$intermediateAppBundlePath/Contents/Info" CFBundleShortVersionString)"
 buildVersion="$(defaults read "$intermediateAppBundlePath/Contents/Info" CFBundleVersion)"
